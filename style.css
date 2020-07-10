@@ -78,6 +78,10 @@ input {
   position: absolute;
 }
 
+#search:active {
+  background-color: lightgrey;
+}
+
 .number,
 .cost {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
