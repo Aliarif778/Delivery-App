@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Delivery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <button class="toggle">
+        <span class="first">View Cart</span>
+        <span class="second display">Close Cart</span>
+      </button>
+    </header>
+
+    <div id="search-container">
+      <h1>Food Delivery App</h1>
+      <form id="submit">
+        <input type="text" placeholder="Search for your favourite meals.." />
+        <button id="search" type="submit">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+      <div id="cartDisplay">
+        <h4 class="cart">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </h4>
+        <p class="number">No item selected</p>
+        <p class="cost">0.00</p>
+      </div>
+      <div id="results-container"></div>
+    </div>
+    <div class="cart-container">
+      <h2>Your Cart</h2>
+      <div class="summary">
+        <p class="number2">No item selected</p>
+        <p class="cost2">0.00</p>
+      </div>
+      <div class="items-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
