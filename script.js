@@ -80,7 +80,7 @@ function addDiv(user) {
 
       list.innerHTML = `
       
-      <div class="list-item" id= "${e.target.parentElement.id.slice(2)}"> 
+      <div class="list-item" id="${e.target.parentElement.id.slice(2)}"> 
     <p> ${e.target.parentElement.children[1].children[0].innerText} </p>
     <p> ${e.target.parentElement.children[1].children[1].innerText}</p>
     <button ><i class="fa fa-trash fa-lg" aria-hidden="true" ></i> </button>
@@ -98,6 +98,11 @@ function addDiv(user) {
       items.appendChild(list);
       updateValues2(foodPrice);
 
+      /* let itemID = e.target.parentElement.id.slice(2);
+      console.log(itemID);
+      let delItem = document.querySelector(`[id='${itemID}']`);
+      console.log(delItem); */
+
       /* Cart done */
     });
   });
@@ -111,9 +116,11 @@ function addDiv(user) {
         reduceValues(reducePrice);
         reduceValues2(reducePrice);
         idArray.splice(index, 1);
-        let itemID = e.target.parentElement.id.slice(2);
 
-        console.log(+itemID);
+        let itemID = e.currentTarget.parentElement.id.slice(2);
+        let delItem = document.querySelector(`[id='${itemID}']`);
+        delItem.remove();
+        // Bhai mere dekh. yeh array pura button clock honay se pehle chal rha ha. ab list item create hi nhi hua tou yeh del item kis me daale ga
       }
 
       console.log(idArray);
@@ -159,3 +166,5 @@ function blow() {
   first.classList.toggle("display");
   second.classList.toggle("display");
 }
+
+function selectItem() {}
