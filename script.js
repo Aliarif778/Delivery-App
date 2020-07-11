@@ -40,7 +40,7 @@ function addDiv(user) {
   user.forEach((item) => {
     const div = document.createElement("div");
     let randomPrice = Math.ceil((Math.random() * 3000) / 100) * 100;
-    let randomID = Math.floor(Math.random() * 100000);
+    let randomID = Math.floor(Math.random() * 10000000);
     div.innerHTML = `
   <div class= "singleMeal" id = "${randomID}">
     <img src=${item.strMealThumb} alt="blah">
@@ -69,16 +69,18 @@ function addDiv(user) {
         2
       );
       idArray.push(e.target.parentElement.id);
-      console.log(idArray);
+
       updateValues(foodPrice);
 
       /* Adding cart */
       cartIDArray.push(e.target.parentElement.id);
       let foodItem2 = j++;
+
       const list = document.createElement("div");
+
       list.innerHTML = `
       
-      <div class="list-item" id= "${e.target.parentElement.id}"> 
+      <div class="list-item" id= "${e.target.parentElement.id.slice(2)}"> 
     <p> ${e.target.parentElement.children[1].children[0].innerText} </p>
     <p> ${e.target.parentElement.children[1].children[1].innerText}</p>
     <button ><i class="fa fa-trash fa-lg" aria-hidden="true" ></i> </button>
@@ -109,7 +111,11 @@ function addDiv(user) {
         reduceValues(reducePrice);
         reduceValues2(reducePrice);
         idArray.splice(index, 1);
+        let itemID = e.target.parentElement.id.slice(2);
+
+        console.log(+itemID);
       }
+
       console.log(idArray);
     });
   });
