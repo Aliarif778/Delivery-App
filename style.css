@@ -170,7 +170,7 @@ h4 {
 }
 
 .cart-container {
-  background-color: brown;
+  background-color: rgba(201, 130, 89, 0.5);
   border-right: 2px solid rgba(200, 200, 200, 0.1);
   position: fixed;
   top: 0;
@@ -181,15 +181,28 @@ h4 {
   transform: translateX(100%);
 }
 
+h2 {
+  padding-top: 3px;
+  font-family: "Acme", sans-serif;
+  font-size: 34px;
+  margin-bottom: 5px;
+}
+
 .summary {
   display: flex;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
 }
 
 .number2,
 .cost2 {
-  margin: 0 20px;
+  margin: 10px 20px;
 }
 
 .list-item {
   display: flex;
+  justify-content: space-between;
+  padding: 5px 15px;
+  background-color: rgba(240, 255, 240, 0.7);
 }
