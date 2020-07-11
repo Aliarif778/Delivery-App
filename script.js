@@ -107,6 +107,7 @@ function addDiv(user) {
       let index = idArray.indexOf(e.currentTarget.parentElement.id);
       if (idArray.includes(e.currentTarget.parentElement.id)) {
         reduceValues(reducePrice);
+        reduceValues2(reducePrice);
         idArray.splice(index, 1);
       }
       console.log(idArray);
