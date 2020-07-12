@@ -9,12 +9,13 @@ header {
 .toggle {
   position: absolute;
   top: 35px;
-  right: 350px;
+  right: 20%;
   padding: 10px 30px;
   background-color: rgba(248, 232, 0, 0.4);
   border-radius: 5px;
   border: 2px solid rgba(255, 78, 26, 0.6);
   outline: none;
+  z-index: 20;
   transition: transform 0.3s;
 }
 
@@ -113,6 +114,11 @@ img {
   background-color: #dfd0dd;
   border-radius: 5px;
   padding: 0 20px;
+  transition: all 500ms;
+}
+
+.singleMeal:hover {
+  box-shadow: 10px 10px 8px #888888;
 }
 
 .flex {
@@ -150,6 +156,7 @@ img {
   background-color: #dfd0dd;
   outline: 0;
   border: 0;
+  cursor: pointer;
 }
 
 .deleteBtn:hover {
@@ -177,7 +184,7 @@ h4 {
   right: 0;
   width: 300px;
   height: 100vh;
-  z-index: 100;
+  z-index: 10;
   transform: translateX(100%);
 }
 
@@ -207,4 +214,26 @@ h2 {
   margin: 5px;
   border-radius: 5px;
   background-color: rgba(240, 255, 240, 0.7);
+}
+
+@media screen and (max-width: 1080px) {
+  h1 {
+    margin-bottom: 90px;
+  }
+  .toggle {
+    top: 100px;
+    right: 43%;
+  }
+
+  .cart-container {
+    background-color: rgb(201, 130, 89);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h2 {
+    margin-bottom: 100px;
+  }
+  .toggle.move {
+    transform: translate(470px);
 }
